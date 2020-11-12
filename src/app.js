@@ -54,7 +54,7 @@ app.get('', (req, res) => {
     // of all values for view to access
     res.render('index', {
         title: 'Weather app',
-        name: 'Nate'
+        name: 'Nathan Chmielewski'
     })
 })
 
@@ -86,15 +86,15 @@ app.get('', (req, res) => {
 app.get('/help', (req, res) => {
     res.render('help', {
         title: 'Help page',
-        name: 'Nate',
-        helpText: 'You\'re my only hope'
+        name: 'Nathan Chmielewski',
+        helpText: 'Contact me at nathanch@me.com'
     })
 })
 
 app.get('/about', (req, res) => {
     res.render('about', {
         title: 'About me',
-        name: 'Nate'
+        name: 'Nathan Chmielewski'
     })
 })
 
@@ -152,7 +152,7 @@ app.get('/weather', (req, res) => {
 app.get('/help/*', (req, res) => {
     res.render('404', {
         title: '404',
-        name: 'Nate',
+        name: 'Nathan Chmielewski',
         errorMsg: 'Help page not found.'
     })
 })
@@ -162,7 +162,7 @@ app.get('/help/*', (req, res) => {
 app.get('*', (req, res) => {
     res.render('404', {
         title: '404',
-        name: 'Nate',
+        name: 'Nathan Chmielewski',
         errorMsg: 'Page not found'
     })
 })
