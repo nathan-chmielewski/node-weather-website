@@ -22,6 +22,9 @@ const partialsDirPath = path.join(__dirname, '../templates/partials')
 // or express will look for hbs views folder in src
 const app = express()
 
+// Heroku port - access via environment variable value, or if locally run, 3000
+const port = process.env.PORT || 3000
+
 // Setup Handlebars engine and views location
 // Installed Handlebars (hbs) templating engine, set in express
 // Express expects handlebars templates to live in dir called views
@@ -168,6 +171,6 @@ app.get('*', (req, res) => {
 // 3000 - common dev port
 // optional callback arg - runs when server is up and running
 // Running server is an asynch process
-app.listen(3000, () => {
-    console.log('Server up on port 3000')
+app.listen(port, () => {
+    console.log('Server up on port ' + port)
 })

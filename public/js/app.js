@@ -52,7 +52,7 @@ weatherForm.addEventListener('submit', (event) => {
     // Access text from user input through value property of search
     // const location = searchText.value
     // const url = 'http://localhost:3000/weather?address=' + location
-    fetch('http://localhost:3000/weather?address=' + searchText.value).then((response) => {
+    fetch('/weather?address=' + searchText.value).then((response) => {
         response.json().then((data) => {
             if (data.error) { 
                 messageOne.textContent = data.error
