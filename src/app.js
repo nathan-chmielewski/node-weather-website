@@ -83,17 +83,17 @@ app.get('', (req, res) => {
 //     }])
 // })
 
-app.get('/help', (req, res) => {
+app.get('/contact', (req, res) => {
     res.render('help', {
-        title: 'Help page',
+        title: 'Contact',
         name: 'Nathan Chmielewski',
-        helpText: 'Contact me at nathanch@me.com'
+        helpText: 'Contact me at '
     })
 })
 
 app.get('/about', (req, res) => {
     res.render('about', {
-        title: 'About me',
+        title: 'About',
         name: 'Nathan Chmielewski'
     })
 })
